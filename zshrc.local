@@ -320,3 +320,15 @@ function jllocal {
         eval "$cmd"
     done
 }
+
+function ts_cp {
+    cp -r ~/TS_Mods "/home/clapika/.local/share/Tabletop Simulator/Saves/"
+}
+
+function gpu_check {
+    for i in 1 2 3 4 5
+    do
+        echo "Checking GPU on CKG0$i"
+        eval "sshpass -p '****' ssh minhpham@ckg0$i.isi.edu '/usr/bin/nvidia-smi'"
+    done
+}
