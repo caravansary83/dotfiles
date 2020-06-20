@@ -175,5 +175,3 @@ function gpu_check {
 }
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-[[ ! -f ~/.path.zsh ]] || source ~/.path.zsh
