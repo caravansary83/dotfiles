@@ -126,21 +126,6 @@ if [ -f ~/.bash_profile ]; then
     . ~/.bash_profile;
 fi
 
-export TERM='xterm-256color'
-
-export PATH="/usr/local/opt/icu4c/bin:$PATH"
-export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-export PATH="/home/clapika/anaconda3/bin/:$PATH"
-export PATH="/home/clapika/anaconda3/include/python3.7m/:$PATH"
-export PATH="/home/clapika/Apps/julia-1.3.0/bin:$PATH"
-export PATH=/usr/local/cuda/bin:/usr/local/cuda/NsightSystems-2018.3/${PATH:+:${PATH}}
-export PATH=/usr/lib/inkdrop/resources/app/ipm/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-export PATH="/home/clapika/Apps/globalprotect/:$PATH"
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
-
 alias ls='colorls --sd'
 alias ll='colorls -l --sd'
 
@@ -175,3 +160,4 @@ function gpu_check {
 }
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.export.zsh ]] || source ~/.export.zsh
