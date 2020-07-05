@@ -82,6 +82,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 setopt no_share_history
 unsetopt share_history
+unsetopt inc_append_history
  
 antigen apply
 
@@ -135,29 +136,6 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
 
-function jllocal {
-    remote_username=minhpham
-    remote_hostname=ckg0$1.isi.edu
-    for i in "${@:2}"
-    do
-        port="$i"
-        cmd="sshpass -p 'Lionqueen123!' ssh -N -f -L localhost:"$port":localhost:"$port" $remote_username@$remote_hostname" 
-        echo "Running ssh -N -f -L localhost:"$port":localhost:"$port" $remote_username@$remote_hostname"
-        eval "$cmd"
-    done
-}
-
-function ts_cp {
-    cp -r ~/TS_Mods "/home/clapika/.local/share/Tabletop Simulator/Saves/"
-}
-
-function gpu_check {
-    for i in 1 2 3 4 5
-    do
-        echo "Checking GPU on CKG0$i"
-        eval "sshpass -p 'Lionqueen123!' ssh minhpham@ckg0$i.isi.edu nvidia-smi"
-    done
-}
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [[ ! -f ~/.export.zsh ]] || source ~/.export.zsh

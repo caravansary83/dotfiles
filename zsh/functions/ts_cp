@@ -1,0 +1,3 @@
+function ts_cp {
+    cp -r ~/TS_Mods "/home/clapika/.local/share/Tabletop Simulator/Saves/"
+}
