@@ -15,6 +15,10 @@ alias s="rspec"
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
+alias ls='colorls --sd'
+alias ll='colorls -l --sd'
+alias ipm='/usr/lib/inkdrop/resources/app/ipm/bin/ipm'
+
 # Include custom aliases
 if [[ -f ~/.aliases.local ]]; then
   source ~/.aliases.local

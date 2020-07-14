@@ -127,8 +127,6 @@ if [ -f ~/.bash_profile ]; then
     . ~/.bash_profile;
 fi
 
-alias ls='colorls --sd'
-alias ll='colorls -l --sd'
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
